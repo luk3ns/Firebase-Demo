@@ -23,7 +23,7 @@ firebaseApp.auth().onAuthStateChanged(function(user) {
     if (user) {
         console.log(user);
     } else {
-        console.log('niezalogowany');
+        console.log('not logged');
     }
   });
 
