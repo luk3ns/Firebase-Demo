@@ -1,5 +1,5 @@
 import {valideField} from './ValideField.js'
-import {item} from './Schema.js'
+//import {item} from './Schema.js'
 
 export async function createNewRecord(list, structure) {
     return new Promise(function (resolve) {
