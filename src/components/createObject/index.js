@@ -5,18 +5,18 @@ export default (parentid) => {
     const element = document.createElement('div');
     element.innerHTML = template;
     document.getElementById(parentid).appendChild(element);
-    document.getElementById('initadd').addEventListener('click', clickToAdd);
+    document.getElementById('initadd').addEventListener('click', clickToAdd(newObj));
    
 }
 
-async function clickToAdd() {
+async function clickToAdd(objToAdd) {
     const collection = document.getElementById('collection').value;
     const name = document.getElementById('name').value;
-    const obj = customer;
+    const obj = objToAdd;
     console.log(collection,name,obj);
     addRecordName(collection, name, obj);
 }
 
-const customer = {
+const newObj = {
     name: "test"
 }
