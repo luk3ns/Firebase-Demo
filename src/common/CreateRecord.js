@@ -1,7 +1,8 @@
 import {valideField} from './ValideField.js'
 import {item} from './Schema.js'
 
-export function createNewRecord(list, structure) {
+export async function createNewRecord(list, structure) {
+    return new Promise(function (resolve) {
     const obj = {};
     const itemsArray = [];
     list.forEach(row => {
@@ -17,15 +18,12 @@ export function createNewRecord(list, structure) {
         });
         itemsArray.push(itemObj);
     });
+    obj.items = itemsArray;
+    //console.log(obj);
+    return obj;
+    //addRecord(obj, 'transactions').then(refid => {
+    //    return refid;
+    //});
 
-    console.log(obj,itemsArray);
-    //return obj;
-    // addRecord(obj, 'transactions').then(refid => {
-    //     console.log(refid);
-    //     itemsArray.forEach(item => {
-    //         addRecord({'refid': refid, ...item},'items');
-    //     })
-    // });
-
-
+    })
 }
