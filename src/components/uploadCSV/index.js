@@ -6,33 +6,33 @@ import template from './template.html';
 
 const structure = {
     fields: [{
-        'name': 'type',
-        'type': 'string',
-        'required': true,
-        'name_map':'type2'
+        name: 'type',
+        type: 'string',
+        required: true,
+        name_map:'type2'
     }, {
-        'name': 'document number',
-        'type': 'int',
-        'required': true,
-        'key': true,
-        'name_map':'documentnumber'
+        name: 'document number',
+        type: 'int',
+        required: true,
+        key: true,
+        name_map:'documentnumber'
     }, {
-        'name': 'customer',
-        'type': 'string',
-        'required': false,
-        'name_map':'customer'
+        name: 'customer',
+        type: 'string',
+        required: false,
+        name_map:'customer'
     }],
     items: [
         {
-            'name': 'item',
-            'type': 'number',
-            'required': true,
-            'name_map':'item2'
+            name: 'item',
+            type: 'number',
+            required: true,
+            name_map:'item2'
         }, {
-            'name': 'quantity',
-            'type': 'int',
-            'required': true,
-            'name_map':'qty'
+            name: 'quantity',
+            type: 'int',
+            required: true,
+            name_map:'qty'
         }
     ]
 }
